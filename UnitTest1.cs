@@ -20,6 +20,15 @@ namespace googleTestSearch
         public void Test1()
         {
             driver.Url = "https://google.com";
+
+            try
+            {
+                driver.FindElement(By.Id("L2AGLb")).Click();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Terms of use not found");
+            }
             Thread.Sleep(2000);
         }
 
