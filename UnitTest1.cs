@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 
@@ -31,6 +32,13 @@ namespace googleTestSearch
             }
 
             driver.FindElement(By.Name("q")).SendKeys("baNaN");
+
+            Thread.Sleep(1000);
+
+            WebDriverWait searchButton= new WebDriverWait(driver, TimeSpan.FromSeconds(2));
+            searchButton.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Name("btnK"))).Click();
+
+            //driver.FindElement(By.Name("btnK")).Click();
 
             Thread.Sleep(2000);
         }

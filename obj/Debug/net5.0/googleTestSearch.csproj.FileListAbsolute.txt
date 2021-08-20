@@ -98,3 +98,4 @@
 /home/darek/c_projects/webDriverTests/googleTestSearch/obj/Debug/net5.0/ref/googleTestSearch.dll
 /home/darek/c_projects/webDriverTests/googleTestSearch/obj/Debug/net5.0/googleTestSearch.pdb
 /home/darek/c_projects/webDriverTests/googleTestSearch/obj/Debug/net5.0/googleTestSearch.genruntimeconfig.cache
+/home/darek/c_projects/webDriverTests/googleTestSearch/bin/Debug/net5.0/SeleniumExtras.WaitHelpers.dll

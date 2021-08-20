@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "O56x+GpME2oAA43Pr5gdb+ckpWtlMfUCEYz/Cj5fP72th60xVczc0foqiGBp9gA9j2lvm+iAA1ACLSDWEdt0jA==",
+  "dgSpecHash": "zVZ51vWu6aPBvlZzK7MBo9g74gFjt+qNO+bCYkUeHQnAxSltXDS7yt+x/nA/UpwMkJ/LkDUQCle/28J9+WEIfA==",
   "success": true,
   "projectFilePath": "/home/darek/c_projects/webDriverTests/googleTestSearch/googleTestSearch.csproj",
   "expectedPackageFiles": [
+    "/home/darek/.nuget/packages/dotnetseleniumextras.waithelpers/3.11.0/dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "/home/darek/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
     "/home/darek/.nuget/packages/microsoft.dotnet.internalabstractions/1.0.0/microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
     "/home/darek/.nuget/packages/microsoft.net.test.sdk/16.5.0/microsoft.net.test.sdk.16.5.0.nupkg.sha512",
