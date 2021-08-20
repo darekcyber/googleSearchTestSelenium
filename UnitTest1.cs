@@ -29,6 +29,9 @@ namespace googleTestSearch
             {
                 Console.WriteLine("Terms of use not found");
             }
+
+            driver.FindElement(By.Name("q")).SendKeys("baNaN");
+
             Thread.Sleep(2000);
         }
 
