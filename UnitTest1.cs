@@ -7,20 +7,24 @@ using System.Threading;
 
 namespace googleTestSearch
 {
+    [TestFixture]
     public class Tests
     {
+        static string url = "https://google.com";
         IWebDriver driver;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             driver = new FirefoxDriver();
         }
 
-        [Test]
-        public void Test1()
+        [TestCase("banan")]
+        [TestCase("pomarancza")]
+        public void TestWitchDifferentWords(String searchText)
         {
-            driver.Url = "https://google.com";
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
 
             try
             {
@@ -31,7 +35,7 @@ namespace googleTestSearch
                 Console.WriteLine("Terms of use not found");
             }
 
-            driver.FindElement(By.Name("q")).SendKeys("baNaN");
+            driver.FindElement(By.Name("q")).SendKeys(searchText);
 
             Thread.Sleep(1000);
 
@@ -41,7 +45,7 @@ namespace googleTestSearch
             Thread.Sleep(2000);
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void closeBrowser()
         {
             driver.Quit();
