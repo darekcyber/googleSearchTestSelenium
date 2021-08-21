@@ -35,10 +35,8 @@ namespace googleTestSearch
 
             Thread.Sleep(1000);
 
-            WebDriverWait searchButton= new WebDriverWait(driver, TimeSpan.FromSeconds(2));
+            WebDriverWait searchButton= new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             searchButton.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Name("btnK"))).Click();
-
-            //driver.FindElement(By.Name("btnK")).Click();
 
             Thread.Sleep(2000);
         }
