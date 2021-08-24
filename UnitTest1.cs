@@ -17,7 +17,18 @@ namespace googleTestSearch
         public void Setup()
         {
             driver = new FirefoxDriver();
+
         }
+
+        public bool isAlertPresent(){
+        try{
+            driver.SwitchTo().Alert();
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
 
         [TestCase("banan")]
         [TestCase("pomarancza")]
@@ -48,7 +59,11 @@ namespace googleTestSearch
   
             Thread.Sleep(2000);
 
+            if(isAlertPresent()){
+            driver.SwitchTo().Alert();
             driver.SwitchTo().Alert().Accept();
+            driver.SwitchTo().DefaultContent();
+        }
         }
 
         [OneTimeTearDown]
