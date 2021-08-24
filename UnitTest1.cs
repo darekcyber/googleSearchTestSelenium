@@ -35,14 +35,20 @@ namespace googleTestSearch
                 Console.WriteLine("Terms of use not found");
             }
 
-            driver.FindElement(By.Name("q")).SendKeys(searchText);
-
-            Thread.Sleep(1000);
+            driver.FindElement(By.XPath("//*[@name='q']")).SendKeys(searchText);
+            //driver.FindElement(By.Name("q")).SendKeys(searchText);
 
             WebDriverWait searchButton= new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             searchButton.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Name("btnK"))).Click();
 
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            string tekst = "alert('" + "Selenium szuka slowo " +searchText + "')";
+  
+            js.ExecuteScript(tekst);
+  
             Thread.Sleep(2000);
+
+            driver.SwitchTo().Alert().Accept();
         }
 
         [OneTimeTearDown]
